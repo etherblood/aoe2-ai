@@ -4,7 +4,7 @@ package com.etherblood.aoe2.ai.core.variables;
  *
  * @author Philipp
  */
-public enum ResearchStatus {
+public enum ResearchStatus implements ScriptValue {
 
     UNAVAILABLE(0),
     AVAILABLE(1),
@@ -17,6 +17,7 @@ public enum ResearchStatus {
         this.var = var;
     }
 
+    @Override
     public String value() {
         return Integer.toString(var);
     }

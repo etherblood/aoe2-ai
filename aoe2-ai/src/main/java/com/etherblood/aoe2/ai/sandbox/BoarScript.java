@@ -1,6 +1,6 @@
 package com.etherblood.aoe2.ai.sandbox;
 
-import com.etherblood.aoe2.ai.core.JavaScript;
+import com.etherblood.aoe2.ai.core.script.JavaScript;
 import static com.etherblood.aoe2.ai.core.actions.Actions.disableSelf;
 import static com.etherblood.aoe2.ai.core.actions.Actions.jumpRule;
 import static com.etherblood.aoe2.ai.core.actions.Actions.requestHunters;

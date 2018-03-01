@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum DiplomaticStance {
+public enum DiplomaticStance implements ScriptValue {
     ALLY("ally"),
     NEUTRAL("neutral"),
     ENEMY("enemy");
@@ -14,6 +16,7 @@ public enum DiplomaticStance {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

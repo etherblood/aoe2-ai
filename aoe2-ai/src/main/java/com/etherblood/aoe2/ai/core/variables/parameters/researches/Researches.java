@@ -5,6 +5,7 @@ package com.etherblood.aoe2.ai.core.variables.parameters.researches;
  * @author Philipp
  */
 public enum Researches implements Research {
+    MY_UNIQUE_UNIT_UPGRADE("my-unique-unit-upgrade"),
     //TC
     FEUDAL_AGE("feudal-age"),
     CASTLE_AGE("castle-age"),
@@ -79,6 +80,7 @@ public enum Researches implements Research {
     HEAVY_CAVALRY_ARCHER("ri-heavy-cavalry-archer"),
     THUMB_RING("ri-thumb-ring"),
     PARTHIAN_TACTICS("ri-parthian-tactics"),
+    HAND_CANNON("ri-hand-cannon"),
     //STABLE
     LIGHT_CAVALRY("ri-light-cavalry"),
     HUSSAR("ri-hussar"),
@@ -184,7 +186,7 @@ public enum Researches implements Research {
     }
 
     @Override
-    public String researchValue() {
+    public String value() {
         return value;
     }
 }

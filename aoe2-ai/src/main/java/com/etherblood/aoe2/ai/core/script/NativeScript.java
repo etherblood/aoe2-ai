@@ -1,4 +1,4 @@
-package com.etherblood.aoe2.ai.core;
+package com.etherblood.aoe2.ai.core.script;
 
 import java.io.IOException;
 import java.nio.file.Files;

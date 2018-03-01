@@ -1,4 +1,4 @@
-package com.etherblood.aoe2.ai.core;
+package com.etherblood.aoe2.ai.core.script;
 
 import com.etherblood.aoe2.ai.core.variables.Constant;
 import java.util.ArrayList;

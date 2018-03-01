@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum VictoryCondition {
+public enum VictoryCondition implements ScriptValue {
     STANDARD("standard"),
     CONQUEST("conquest"),
     TIME_LIMIT("time-limit"),
@@ -16,6 +18,7 @@ public enum VictoryCondition {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

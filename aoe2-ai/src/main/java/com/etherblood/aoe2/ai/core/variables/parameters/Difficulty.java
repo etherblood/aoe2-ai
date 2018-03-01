@@ -1,5 +1,7 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  * The ordering of difficulty settings is the opposite of what one would expect!
  * Make sure that this is taken in account when using facts to compare
@@ -7,7 +9,7 @@ package com.etherblood.aoe2.ai.core.variables.parameters;
  *
  * @author Philipp
  */
-public enum Difficulty {
+public enum Difficulty implements ScriptValue {
     HARDEST("hardest"), HARD("hard"), MODERATE("moderate"), EASY("easy"), EASIEST("easiest");
     private final String value;
 
@@ -15,6 +17,7 @@ public enum Difficulty {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

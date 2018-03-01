@@ -1,19 +1,24 @@
 package com.etherblood.aoe2.ai.core.actions;
 
-import java.util.Arrays;
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 class ActionImpl implements Action {
 
-    private final String script;
+    private final String command;
+    private final ScriptValue[] args;
 
-    public ActionImpl(String... parts) {
-        this.script = Arrays.stream(parts).collect(Collectors.joining(" "));
+    public ActionImpl(String command, ScriptValue... args) {
+        this.command = command;
+        this.args = args;
     }
 
     @Override
     public void unparse(Consumer<String> output) {
-        output.accept(script);
+        output.accept(command);
+        for (ScriptValue arg : args) {
+            output.accept(" ");
+            output.accept(arg.value());
+        }
     }
 }

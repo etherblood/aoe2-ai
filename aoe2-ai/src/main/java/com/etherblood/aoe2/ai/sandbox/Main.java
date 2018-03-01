@@ -1,11 +1,11 @@
 package com.etherblood.aoe2.ai.sandbox;
 
-import com.etherblood.aoe2.ai.core.JavaScript;
+import com.etherblood.aoe2.ai.core.script.JavaScript;
 import static com.etherblood.aoe2.ai.core.actions.Actions.*;
 import static com.etherblood.aoe2.ai.core.variables.parameters.RelOp.*;
 import static com.etherblood.aoe2.ai.core.variables.parameters.buildings.Buildings.*;
 import static com.etherblood.aoe2.ai.core.facts.Facts.*;
-import static com.etherblood.aoe2.ai.core.variables.DifficultyParameters.*;
+import static com.etherblood.aoe2.ai.core.variables.DifficultyParameter.*;
 import static com.etherblood.aoe2.ai.core.variables.Toggle.ON;
 import com.etherblood.aoe2.ai.core.variables.parameters.Perimeter;
 import static com.etherblood.aoe2.ai.core.variables.strategicnumbers.StrategicNumbers.*;
@@ -28,16 +28,9 @@ public class Main {
         JavaScript script = new JavaScript();
         script.rule("init")
                 .then(
-//                        chatDataToSelf("hunterId: %d", "villager-hunter"),
                         disableSelf(),
-                        enableWallPlacement(Perimeter.OUTER),
-//                        enableWallPlacement(Perimeter.OUTER),
+                        enableWallPlacement(Perimeter.INNER),
                         assignBuilders(HOUSE, 2),
-//                        setStrategicNumber(GATHER_IDLE_SOLDIERS_AT_CENTER, ON),
-//                        setStrategicNumber(ATTACK_INTELLIGENCE, ON),
-//                        setStrategicNumber(COOP_SHARE_ATTACKING, ON),
-//                        setStrategicNumber(COOP_SHARE_INFORMATION, ON),
-//                        setStrategicNumber(REQUIRED_FIRST_BUILDING, HOUSE),
                         setStrategicNumber(CAP_CIVILIAN_EXPLORERS, 0),
                         setStrategicNumber(ENABLE_NEW_BUILDING_SYSTEM, ON),
                         setStrategicNumber(PERCENT_CIVILIAN_BUILDERS, 100),
@@ -45,8 +38,8 @@ public class Main {
                         setStrategicNumber(TOTAL_NUMBER_EXPLORERS, 1),
                         setStrategicNumber(NUMBER_EXPLORE_GROUPS, 1),
                         setStrategicNumber(INTELLIGENT_GATHERING, ON),
-                        setDifficultyParameter(ABILITY_TO_DODGE_MISSLES, 0),
-                        setDifficultyParameter(ABILITY_TO_MAINTAIN_DISTANCE, 0));
+                        setDifficultyParameter(ABILITY_TO_DODGE_MISSLES, 100),
+                        setDifficultyParameter(ABILITY_TO_MAINTAIN_DISTANCE, 100));
 
         script.rule("collect food")
                 .when(
@@ -81,18 +74,6 @@ public class Main {
                         build(HOUSE),
                         chatLocalToSelf("building house"));
 
-//        script.rule("build farms")
-//                .when(
-//                        not(resourceFound(Resource.FOOD)),
-//                        canBuild(FARM),
-//                        woodAmount(GREATER_OR_EQUAL, 160),
-//                        //                        foodAmount(LESS_THAN, 50),
-//                        idleFarmCount(LESS_OR_EQUAL, 0),
-//                        sheepAndForageTooFar(),
-//                        pendingObjects(FARM, LESS_OR_EQUAL, 1))
-//                .then(
-//                        build(FARM),
-//                        chatLocalToSelf("building farm"));
 
         List<JavaScript> scripts = Arrays.asList(
                 new BoarScript(),

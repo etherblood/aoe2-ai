@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum Dropsite {
+public enum Dropsite implements ScriptValue {
 
     FOOD("food"),
     LIVE_BOAR("live-boar"),
@@ -20,6 +22,7 @@ public enum Dropsite {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

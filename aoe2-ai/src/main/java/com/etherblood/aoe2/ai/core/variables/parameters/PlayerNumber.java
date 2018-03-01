@@ -1,5 +1,7 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  * a valid player number or one of the wildcard parameters (if explicitly
  * allowed by the fact/action): any-ally any-computer any-computer-ally
@@ -11,8 +13,9 @@ package com.etherblood.aoe2.ai.core.variables.parameters;
  *
  * @author Philipp
  */
-public class PlayerNumber {
+public class PlayerNumber implements ScriptValue {
 
+    public final static PlayerNumber MY_PLAYER_NUMBER = new PlayerNumber("my-player-number");
     public final static PlayerNumber ANY_ALLY = new PlayerNumber("any-ally");
     public final static PlayerNumber ANY_COMPUTER = new PlayerNumber("any-computer");
     public final static PlayerNumber ANY_COMPUTER_ALLY = new PlayerNumber("any-computer-ally");
@@ -40,6 +43,7 @@ public class PlayerNumber {
         this.number = number;
     }
 
+    @Override
     public String value() {
         return number;
     }

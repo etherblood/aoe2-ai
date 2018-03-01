@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum MapSize {
+public enum MapSize implements ScriptValue {
     TINY("tiny"),
     SMALL("small"),
     MEDIUM("medium"),
@@ -17,6 +19,7 @@ public enum MapSize {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

@@ -1,11 +1,13 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum Civilization {
-
+public enum Civilization implements ScriptValue {
+    MY_CIV("my-civ"),
     GAIA("gaia"),
     AZTEC("aztec"),
     BRITON("briton"),
@@ -25,13 +27,14 @@ public enum Civilization {
     TEUTONIC("teutonic"),
     TURCISH("turkish"),
     VIKING("viking");
-    
+
     private final String value;
 
     private Civilization(String value) {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

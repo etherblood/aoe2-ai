@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum Resource {
+public enum Resource implements ScriptValue {
 
     FOOD("food"),
     WOOD("wood"),
@@ -17,6 +19,7 @@ public enum Resource {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return value;
     }

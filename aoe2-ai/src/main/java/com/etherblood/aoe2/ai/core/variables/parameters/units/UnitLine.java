@@ -5,6 +5,7 @@ package com.etherblood.aoe2.ai.core.variables.parameters.units;
  * @author Philipp
  */
 public enum UnitLine implements Units {
+    MY_UNIQUE_UNIT_LINE(Integer.MAX_VALUE, "my-unique-unit-line"),
     STONE_WALL_LINE(-399, "stone-wall-line"),
     WATCH_TOWER_LINE(-398, "watch-tower-line"),
     ARCHER_LINE(-299, "archer-line"),
@@ -59,7 +60,7 @@ public enum UnitLine implements Units {
     }
 
     @Override
-    public String unitValue() {
+    public String value() {
         return name;
     }
 }

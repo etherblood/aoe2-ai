@@ -6,6 +6,8 @@ package com.etherblood.aoe2.ai.core.variables.parameters.units;
  */
 public enum Unit implements Units {
 
+    MY_UNIQUE_UNIT(Integer.MIN_VALUE, "my-unique-unit"),
+    MY_ELITE_UNIQUE_UNIT(Integer.MAX_VALUE, "my-elite-unique-unit"),
     ARCHER(4, "archer"),
     HAND_CANNONEER(5, "hand-cannoneer"),
     ELITE_SKIRMISHER(6, "elite-skirmisher"),
@@ -309,7 +311,7 @@ public enum Unit implements Units {
     }
 
     @Override
-    public String unitValue() {
+    public String value() {
         return name;
     }
 }

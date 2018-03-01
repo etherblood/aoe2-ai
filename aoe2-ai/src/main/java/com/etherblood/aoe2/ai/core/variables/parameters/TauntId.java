@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum TauntId {
+public enum TauntId implements ScriptValue {
     YES(1),
     NO(2),
     FOOD_PLEASE(3),
@@ -47,13 +49,14 @@ public enum TauntId {
     ENEMY_SOUND(40),
     NEUTRAL_SOUND(41),
     WHAT_AGE_ARE_YOU_IN(42);
-    
+
     private final int value;
 
     private TauntId(int value) {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return Integer.toString(value);
     }

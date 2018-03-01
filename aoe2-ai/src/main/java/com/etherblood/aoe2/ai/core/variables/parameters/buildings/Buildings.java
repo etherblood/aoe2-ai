@@ -29,7 +29,7 @@ public enum Buildings implements Building {
     }
 
     @Override
-    public String buildingValue() {
+    public String value() {
         return var;
     }
 }

@@ -1,20 +1,20 @@
 package com.etherblood.aoe2.ai.core.variables;
 
-/**
- *
- * @author Philipp
- */
-public enum Toggle implements ScriptValue {
-    OFF(0), ON(1);
+public class IntValue implements ScriptValue {
 
     private final int value;
 
-    private Toggle(int value) {
+    private IntValue(int value) {
         this.value = value;
+    }
+    
+    public static IntValue of(int value) {
+        return new IntValue(value);
     }
 
     @Override
     public String value() {
         return Integer.toString(value);
     }
+
 }

@@ -51,7 +51,7 @@ public enum UnitGroup implements Units {
     }
 
     @Override
-    public String unitValue() {
+    public String value() {
         return Integer.toString(id);
     }
 }

@@ -1,7 +1,7 @@
 package com.etherblood.aoe2.ai.sandbox;
 
-import com.etherblood.aoe2.ai.core.JavaScript;
-import com.etherblood.aoe2.ai.core.Rule;
+import com.etherblood.aoe2.ai.core.script.JavaScript;
+import com.etherblood.aoe2.ai.core.script.Rule;
 import static com.etherblood.aoe2.ai.core.actions.Actions.*;
 import static com.etherblood.aoe2.ai.core.variables.parameters.RelOp.*;
 import static com.etherblood.aoe2.ai.core.facts.Facts.*;

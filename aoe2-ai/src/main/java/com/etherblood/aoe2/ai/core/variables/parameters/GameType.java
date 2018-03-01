@@ -1,10 +1,12 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  *
  * @author Philipp
  */
-public enum GameType {
+public enum GameType implements ScriptValue {
     RANDOM(0),
     REGICIDE(1),
     DEATH_MATCH(2),
@@ -19,6 +21,7 @@ public enum GameType {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return Integer.toString(value);
     }

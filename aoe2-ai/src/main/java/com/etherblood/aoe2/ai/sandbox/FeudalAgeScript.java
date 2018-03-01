@@ -1,7 +1,7 @@
 package com.etherblood.aoe2.ai.sandbox;
 
-import com.etherblood.aoe2.ai.core.JavaScript;
-import com.etherblood.aoe2.ai.core.Rule;
+import com.etherblood.aoe2.ai.core.script.JavaScript;
+import com.etherblood.aoe2.ai.core.script.Rule;
 import static com.etherblood.aoe2.ai.core.actions.Actions.*;
 import com.etherblood.aoe2.ai.core.variables.parameters.RelOp;
 import static com.etherblood.aoe2.ai.core.variables.parameters.RelOp.*;
@@ -9,11 +9,9 @@ import static com.etherblood.aoe2.ai.core.facts.Facts.*;
 import com.etherblood.aoe2.ai.core.variables.ResearchStatus;
 import com.etherblood.aoe2.ai.core.variables.parameters.buildings.Buildings;
 import com.etherblood.aoe2.ai.core.variables.parameters.researches.Researches;
-import static com.etherblood.aoe2.ai.core.variables.Toggle.ON;
 import com.etherblood.aoe2.ai.core.variables.parameters.Dropsite;
 import com.etherblood.aoe2.ai.core.variables.parameters.Perimeter;
 import com.etherblood.aoe2.ai.core.variables.parameters.Resource;
-import com.etherblood.aoe2.ai.core.variables.parameters.units.Unit;
 import com.etherblood.aoe2.ai.core.variables.parameters.Wall;
 import com.etherblood.aoe2.ai.core.variables.parameters.buildings.Building;
 import com.etherblood.aoe2.ai.core.variables.parameters.researches.Research;

@@ -1,5 +1,7 @@
 package com.etherblood.aoe2.ai.core.variables.parameters;
 
+import com.etherblood.aoe2.ai.core.variables.ScriptValue;
+
 /**
  * a valid wall perimeter. Allowed values are 1 and 2, with 1 being closer to
  * the Town Center than 2. Perimeter 1 is usually between 10 and 20 tiles from
@@ -8,7 +10,7 @@ package com.etherblood.aoe2.ai.core.variables.parameters;
  *
  * @author Philipp
  */
-public enum Perimeter {
+public enum Perimeter implements ScriptValue {
     INNER(0),
     OUTER(1);
     private final int value;
@@ -17,6 +19,7 @@ public enum Perimeter {
         this.value = value;
     }
 
+    @Override
     public String value() {
         return Integer.toString(value);
     }
